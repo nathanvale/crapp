@@ -17,6 +17,11 @@
       "post-rewrite": "easy-scripts pre-commit"
     }
   },
+  "babel": {
+    "presets": [
+      "./node_modules/easy-scripts/dist/config/babelrc.js"
+    ]
+  },
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -24,20 +29,33 @@
     "not op_mini all"
   ],
   "eslintConfig": {
-    "extends": "./node_modules/easy-scripts/dist/config/eslintrc.js"
+    "extends": "./node_modules/easy-scripts/dist/config/eslintrc.js",
+    "rules": {}
   },
   "jest": {
-    "preset": "./node_modules/easy-scripts/dist/config/jest.config.js"
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    },
+    "preset": "./node_modules/easy-scripts/dist/config/jest.config.js",
+    "transformIgnorePatterns": [
+      "/node_modules/(?!lodash-es)"
+    ]
   },
   "dependencies": {
+    "@babel/runtime": "^7.4.0",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-scripts": "^2.1.8"
+    "react-dom": "^16.8.4"
   },
   "devDependencies": {
-    "easy-scripts": "^2.3.3",
     "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.2",
+    "easy-scripts": "^2.3.12",
+    "react-scripts": "^2.1.8",
     "react-testing-library": "^6.0.0",
     "typescript": "^3.3.3"
   }

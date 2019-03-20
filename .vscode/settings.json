@@ -13,5 +13,8 @@
   ],
   "eslint.enable": true,
   "eslint.alwaysShowStatus": true,
-  "eslint.nodePath": "node_modules/easy-scripts/node_modules"
+  "eslint.nodePath": "node_modules/easy-scripts/node_modules",
+  "eslint.provideLintTask": true,
+  "prettier.requireConfig": true,
+  "prettier.eslintIntegration": false
 }

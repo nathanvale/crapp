@@ -3,7 +3,7 @@ import logo from './logo.svg'
 import './App.css'
 
 class App extends Component {
-  render() {
+  render(): JSX.Element {
     return (
       <div className="App">
         <header className="App-header">
@@ -25,4 +25,5 @@ class App extends Component {
   }
 }
 
+// eslint-disable-next-line import/no-default-export
 export default App
