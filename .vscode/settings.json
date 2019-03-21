@@ -16,5 +16,5 @@
   "eslint.nodePath": "node_modules/easy-scripts/node_modules",
   "eslint.provideLintTask": true,
   "prettier.requireConfig": true,
-  "prettier.eslintIntegration": false
+  "prettier.eslintIntegration": true
 }
